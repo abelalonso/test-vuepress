@@ -1,0 +1,35 @@
+name: Deploy Version
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2.1.4
+
+      - name: Install dependencies and generate doc
+        run: |
+          npm install
+          npm run build
+
+      - name: Move doc files
+        run: |
+          mkdir -p docs
+          #rm -rf docs/*
+          rsync -avu --delete src/.vuepress/dist/* docs  
+
+      - name: Create CNAME file
+        run: echo "abelalonso/test-vuepress" > docs/CNAME
+
+      - name: upload Dist
+        run: |
+          git config --global user.email "bot@github.io"
+          git config --global user.name "Bot"
+          git add -A
+          git commit -m "Doc Generated"
+          git push
