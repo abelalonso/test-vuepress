@@ -11,7 +11,7 @@ module.exports = {
   themeConfig: {
     repo: '',
     editLinks: false,
-    docsDir: '/test-vuepress/',
+    docsDir: '',
     editLinkText: '',
     lastUpdated: false,
     logo: '/logo.png',
