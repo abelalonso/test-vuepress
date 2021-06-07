@@ -21,6 +21,10 @@ module.exports = {
         text: 'Section 1',
         link: '/section1/',
       },
+      {
+        text: 'Section 2',
+        link: '/section2/',
+      },
     ],
     sidebar: {
         '/section1/': [
@@ -34,7 +38,18 @@ module.exports = {
               ['subsection2', 'Subsection 2'],
             ]
           }
-        ]
+        ],
+        '/section2/': [
+          {
+            title: 'Section 2',
+            path: '/section2/',
+            sidebarDepth: 1,
+            children: [
+              ['http://google.es', 'Go to google'],
+              ['http://github.com', 'Github'],
+            ]
+          }
+        ],
     }
   },
 
