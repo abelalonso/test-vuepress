@@ -3,7 +3,7 @@ const { description } = require('../../package')
 module.exports = {
   title: 'Test Documentation Page',
   description: description,
-  base: '/test-vuepress/',
+  base: '/./',
   head: [
     ['meta', { name: 'theme-color', content: '#d60f0f' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
