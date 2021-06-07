@@ -14,7 +14,7 @@ module.exports = {
     docsDir: '',
     editLinkText: '',
     lastUpdated: false,
-    logo: '/logo.png',
+    logo: '/common/logo.png',
     nav: [
       {
         text: 'Section 1',

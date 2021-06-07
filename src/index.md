@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /logo.png
+heroImage: /common/logo.png
 tagline: 
 actionText: 
 actionLink: 
