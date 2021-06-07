@@ -24,7 +24,7 @@ jobs:
           rsync -avu --delete src/.vuepress/dist/* docs  
 
       - name: Create CNAME file
-        run: echo "abelalonso/test-vuepress" > docs/CNAME
+        run: echo "abelalonso.test-vuepress" > docs/CNAME
 
       - name: upload Dist
         run: |
